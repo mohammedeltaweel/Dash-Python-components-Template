@@ -114,7 +114,9 @@ body {
     line-height: 1.43;
     width: 20%;
     opacity: 0;
+    /* transition: opacity 0.2s ease-in-out; */
 }
+
 .range-input .range-labels .range-labels-item.active {
   margin-top: 10px;
   font-size: 18px;
