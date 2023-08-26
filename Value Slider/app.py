@@ -4,19 +4,44 @@
 
 from dash import Dash, dcc, html, Input, Output, clientside_callback, callback
 
+# app.layout = html.Div(
+#     [
+#         dcc.Input(
+#             id="input_{}".format(_),
+#             type=_,
+#             placeholder="input type {}".format(_),
+#         )
+#         for _ in ALLOWED_TYPES
+#     ]
+#     + [html.Div(id="out-all-types")]
+# )
+
+
 app = Dash(__name__)
 year_values = [2017, 2018, 2019, 2020]
 app.layout = html.Div(className="range-input", children=[
+        html.Div("Select Year", className="year-chooser-title"),
         dcc.Input(
             id="my-slider",
             type="range",
             min=min(year_values),
             max=max(year_values),
-            value=year_values[0],
-            step=year_values[2] - year_values[1],
-            autoFocus=True
-        ),
+            value=year_values[len(year_values)-1],
+            step=year_values[2] - year_values[1]
+            ),
         html.Div(className="value", children=html.Div(id="output-div-js")),
+        html.Ul(
+            className="range-labels",
+            children= [
+                html.Li(
+                    id="year-{}".format(i),
+                    className="range-labels-item item-{} {}".format(year_values[i], "always-show start" if i == 0 else "always-show end active" if i == len(year_values) - 1 else ""),
+                    **{"data-index": i},
+                    children=year_values[i]
+                )
+                for i in range(0, len(year_values))
+            ]
+            ),
         html.Div(id="dummy"),
         # If you want to show the values using dash callback instead of JS uncomment the following div and 
         # html.Div(id="slider-value-dash")

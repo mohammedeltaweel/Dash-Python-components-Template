@@ -11,10 +11,17 @@
 </head>
 <body>
     <div class="range-input">
-        <input type="range" min="0" max="100" value="0" step="20" autofocus>
+        <div class="year-chooser-title">Select Year</div>
+        <input type="range" min="2017" max="2020" value="2020" step="1" autofocus>
         <div class="value">
           <div></div>
         </div>
+        <ul class="range-labels">
+            <li class="range-labels-item item-2016 always-show start" data-index="1">2017</li>
+            <li class="range-labels-item item-2016" data-index="2">2018</li>
+            <li class="range-labels-item item-2017" data-index="3">2019</li>
+            <li class="range-labels-item item-2018 always-show active end" data-index="4">2020</li>
+        </ul>
       </div>
       <script src="assets/script.js"></script>
 </body>
