@@ -12,7 +12,7 @@
 <body>
     <div class="range-input">
         <div class="year-chooser-title">Select Year</div>
-        <input type="range" min="2017" max="2020" value="2020" step="1" autofocus>
+        <input type="range" min="2017" max="2020" value="2020" step="1">
         <div class="value">
           <div></div>
         </div>
@@ -23,10 +23,59 @@
             <li class="range-labels-item item-2020 always-show active end" data-index="4">2020</li>
         </ul>
       </div>
-      <script src="assets/script.js"> 
+      <!-- <script src="assets/script.js"> 
       </script>
       <script>
       sliderValShow(); 
-      </script>
-</body>
+      </script> -->
+<script>
+  function sliderValShow() {
+    const rangeInput = document.querySelector('.range-input input');
+    // Get the labels
+    const labels = document.querySelectorAll('.range-labels-item');
+
+    // Add a click event listener to the labels
+    labels.forEach(label => {
+        label.addEventListener('click', function () {
+            // Get the year value from the clicked label
+            const selectedYear = parseInt(label.textContent);
+
+            // Set the value of the input to the selected year
+            rangeInput.value = selectedYear;
+
+            // Remove the "active" class from all labels
+            labels.forEach(label => {
+                label.classList.remove('active');
+            });
+
+            // Add the "active" class to the clicked label
+            label.classList.add('active');
+        });
+    });
+
+    // Add an input event listener to update the labels when the input value changes
+    rangeInput.addEventListener('input', function () {
+        // Get the selected year value
+        const selectedYear = parseInt(rangeInput.value);
+
+        // Remove the "active" class from all labels
+        labels.forEach(label => {
+            label.classList.remove('active');
+        });
+
+        // Add the "active" class to the corresponding label
+        const correspondingLabel = document.querySelector(`.item-${selectedYear}`);
+        console.log(correspondingLabel);
+
+        if (correspondingLabel) {
+            correspondingLabel.classList.add('active');
+        }
+    });
+}
+
+// Call the function when the page loads
+sliderValShow();
+
+</script>
+    </body>
 </html>

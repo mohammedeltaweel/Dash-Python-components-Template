@@ -23,27 +23,46 @@
 // }
 
 // Get the range input element
-function sliderValShow(){
-const rangeInput = document.querySelector('.range-input input');
-// Get the labels
-const labels = document.querySelectorAll('.range-labels-item');
+function sliderValShow() {
+  const rangeInput = document.querySelector('.range-input input');
+  // Get the labels
+  const labels = document.querySelectorAll('.range-labels-item');
 
-// Add a click event listener to the range input
-rangeInput.addEventListener('click', function () {
-    // Remove the "active" class from all labels
-    labels.forEach(label => {
-        label.classList.remove('active');
-    });
+  // Add a click event listener to the labels
+  labels.forEach(label => {
+      label.addEventListener('click', function () {
+          // Get the year value from the clicked label
+          const selectedYear = parseInt(label.textContent);
 
-    // Get the selected year value
-    const selectedYear = parseInt(rangeInput.value);
+          // Set the value of the input to the selected year
+          rangeInput.value = selectedYear;
 
-    // Add the "active" class to the corresponding label
-    const correspondingLabel = document.getElementsByClassName(`item-${selectedYear}`)[0];
+          // Remove the "active" class from all labels
+          labels.forEach(label => {
+              label.classList.remove('active');
+          });
 
-    // console.log(correspondingLabel);
-    if (correspondingLabel) {
-        correspondingLabel.classList.add('active');
-    }
-});
+          // Add the "active" class to the clicked label
+          label.classList.add('active');
+      });
+  });
+
+  // Add an input event listener to update the labels when the input value changes
+  rangeInput.addEventListener('input', function () {
+      // Get the selected year value
+      const selectedYear = parseInt(rangeInput.value);
+
+      // Remove the "active" class from all labels
+      labels.forEach(label => {
+          label.classList.remove('active');
+      });
+
+      // Add the "active" class to the corresponding label
+      const correspondingLabel = document.querySelector(`.item-${selectedYear}`);
+      console.log(correspondingLabel);
+
+      if (correspondingLabel) {
+          correspondingLabel.classList.add('active');
+      }
+  });
 }
