@@ -4,19 +4,6 @@
 
 from dash import Dash, dcc, html, Input, Output, clientside_callback, callback
 
-# app.layout = html.Div(
-#     [
-#         dcc.Input(
-#             id="input_{}".format(_),
-#             type=_,
-#             placeholder="input type {}".format(_),
-#         )
-#         for _ in ALLOWED_TYPES
-#     ]
-#     + [html.Div(id="out-all-types")]
-# )
-
-
 app = Dash(__name__)
 year_values = [2017, 2018, 2019, 2020]
 app.layout = html.Div(className="range-input", children=[
