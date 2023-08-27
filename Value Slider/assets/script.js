@@ -24,16 +24,21 @@
 
 // Get the range input element
 function sliderValShow() {
+  
   const rangeInput = document.querySelector('.range-input input');
-  // Get the labels
-  const labels = document.querySelectorAll('.range-labels-item');
 
+
+  // Get the labels
+
+  const labels = document.querySelectorAll('.range-labels-item'); 
   // Add a click event listener to the labels
+
   labels.forEach(label => {
       label.addEventListener('click', function () {
+        console.log(label);
+
           // Get the year value from the clicked label
           const selectedYear = parseInt(label.textContent);
-
           // Set the value of the input to the selected year
           rangeInput.value = selectedYear;
 
@@ -41,7 +46,6 @@ function sliderValShow() {
           labels.forEach(label => {
               label.classList.remove('active');
           });
-
           // Add the "active" class to the clicked label
           label.classList.add('active');
       });
@@ -59,7 +63,6 @@ function sliderValShow() {
 
       // Add the "active" class to the corresponding label
       const correspondingLabel = document.querySelector(`.item-${selectedYear}`);
-      console.log(correspondingLabel);
 
       if (correspondingLabel) {
           correspondingLabel.classList.add('active');

@@ -29,18 +29,19 @@
       sliderValShow(); 
       </script> -->
 <script>
-  function sliderValShow() {
+function sliderValShow() {
     const rangeInput = document.querySelector('.range-input input');
-    // Get the labels
+    const labelsContainer = document.querySelector('.range-labels');
     const labels = document.querySelectorAll('.range-labels-item');
 
-    // Add a click event listener to the labels
-    labels.forEach(label => {
-        label.addEventListener('click', function () {
+    // Add a click event listener to the labels container (event delegation)
+    labelsContainer.addEventListener('click', function (event) {
+        // Check if the clicked element is a label with the "range-labels-item" class
+        if (event.target.classList.contains('range-labels-item')) {
             // Get the year value from the clicked label
-            const selectedYear = parseInt(label.textContent);
+            const selectedYear = parseInt(event.target.textContent);
 
-            // Set the value of the input to the selected year
+            // Set the value of the input to the clicked year
             rangeInput.value = selectedYear;
 
             // Remove the "active" class from all labels
@@ -49,8 +50,8 @@
             });
 
             // Add the "active" class to the clicked label
-            label.classList.add('active');
-        });
+            event.target.classList.add('active');
+        }
     });
 
     // Add an input event listener to update the labels when the input value changes
@@ -65,13 +66,15 @@
 
         // Add the "active" class to the corresponding label
         const correspondingLabel = document.querySelector(`.item-${selectedYear}`);
-        console.log(correspondingLabel);
 
         if (correspondingLabel) {
             correspondingLabel.classList.add('active');
         }
     });
 }
+
+// Call the function when the page loads
+sliderValShow();
 
 // Call the function when the page loads
 sliderValShow();
