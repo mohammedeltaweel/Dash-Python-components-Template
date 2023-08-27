@@ -30,8 +30,8 @@ body {
     background:darkgray;
     border:none;
     outline:none;
-    /* background-clip: content-box; */
     position: relative;
+    cursor: pointer;
   }
   .range-input input::-webkit-slider-thumb {
     -webkit-appearance:none;
@@ -43,7 +43,6 @@ body {
     outline-offset: 0.125rem;
     z-index: 1000;
     border-radius:50%;
-    
   }  
   .range-input input::-moz-range-thumb {
     -webkit-appearance:none;
