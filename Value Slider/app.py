@@ -43,8 +43,7 @@ app.layout = html.Div(className="range-input", children=[
             ]
             ),
         html.Div(id="dummy"),
-        # If you want to show the values using dash callback instead of JS uncomment the following div and 
-        # html.Div(id="slider-value-dash")
+
 ])
 
 clientside_callback(
@@ -54,15 +53,6 @@ clientside_callback(
 }""", 
 Output('output-div-js', 'children'), Input('my-slider', 'value'))
 
-
-
-# Uncomment to use the slider-value-dash div to show slider value instead of clientside callback
-# @callback(
-#     Output("slider-value-dash", "children"),
-#     Input("my-slider", "value")
-# )
-# def update_slider(value_of):
-#     return value_of
 
 if __name__ == "__main__":
     app.run(debug=True)
