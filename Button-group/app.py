@@ -16,10 +16,21 @@ app.layout = html.Div([
                                     **{"data-value": i}, 
                                     children=button_dict["value-description"][idx])
                                   for idx, i in enumerate(button_dict["values"])
-                           ])
+                           ]),
+                           html.Div(id="dummy-div2")
                         ])
             ])
 ])
+
+clientside_callback(
+    """
+    function(){
+    changeActiveBtn();
+    return window.dash_clientside.no_update
+    }
+""",
+Output("dummy-div2", "children"), Input("dummy-div2", "children")
+)
 
 if __name__ == "__main__":
     app.run(debug=True)
