@@ -6,7 +6,8 @@ from dash import Dash, dcc, html, Input, Output, clientside_callback, callback
 
 app = Dash(__name__)
 year_values = [2017, 2018, 2019, 2020]
-app.layout = html.Div(className="range-input", children=[
+app.layout = html.Div(className="year-chooser with-border", children=[
+    html.Div(className="range-input", children=[
         html.Div("Select Year", className="year-chooser-title"),
         dcc.Input(
             id="my-slider",
@@ -30,6 +31,7 @@ app.layout = html.Div(className="range-input", children=[
             ]
             ),
         html.Div(id="dummy"),
+])
 ])
 
 clientside_callback(

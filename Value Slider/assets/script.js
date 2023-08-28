@@ -22,7 +22,6 @@
 // });
 // }
 
-// Get the range input element
 function sliderValShow() {
   
   const rangeInput = document.querySelector('.range-input input');
