@@ -1,0 +1,175 @@
+* {
+    background-color: #183a67;
+}
+.side-menu {
+    max-width: 450px;
+    min-width: 300px;
+    /* width: 18%; */
+    background-color: var(--main-color);
+    border-radius: 5px;
+    border: solid 1px var(--tertiary-color);
+    box-shadow: 0 5px 22px 0 var(--dark-blue);
+    padding: 20px;
+  }
+  
+  .filters {
+    width: 100%;
+    height: inherit;
+    display: flex;
+    flex-direction: column; 
+    position: relative;
+  }
+  
+  .filters > span {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--neutral-color);
+    text-align: center;
+    padding-block: 10px;
+  }
+  
+  .filters .filter-selection {
+    margin-inline: 10px;
+  }
+  .filters .filter-selection li {
+    display: flex;
+    list-style: none;
+    padding: 5px;
+    align-items: center; /* Center the items vertically */
+    margin-block-end: 15px;
+    width:fit-content;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  
+  .filters .filter-selection .filter-dot {
+    display: inline-block;
+    background-color: transparent;
+    width: 20px;
+    height: 15px;
+    margin-inline-end: 5px;
+    border: 1px var(--disabled-color) solid;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s all ease-in-out;
+  }
+  
+  .filters .filter-selection .filter-text {
+    color: var(--disabled-color);
+    cursor: pointer;
+    user-select: none;
+    transition: .2s all ease-in-out;
+  }
+  
+  .filters .filter-selection li:nth-child(1) .filter-dot.active {
+    background-color: var(--filter-color-1);
+    border: 1px var(--filter-color-1) solid;
+  }
+  
+  .filters .filter-selection li:nth-child(2) .filter-dot.active {
+    background-color: var(--filter-color-2);
+    border: 1px var(--filter-color-2) solid;
+  }
+  
+  .filters .filter-selection li:nth-child(3) .filter-dot.active {
+    background-color: var(--filter-color-3);
+    border: 1px var(--filter-color-3) solid;
+  }
+  
+  .filters .filter-selection li:nth-child(4) .filter-dot.active {
+    background-color: var(--filter-color-4);
+    border: 1px var(--filter-color-4) solid;
+  }
+  
+  .filters .filter-selection li:nth-child(5) .filter-dot.active {
+    background-color: var(--filter-color-5);
+    border: 1px var(--filter-color-5) solid;
+  }
+  
+  .filters .filter-selection li:nth-child(6) .filter-dot.active {
+    background-color: var(--filter-color-6);
+    border: 1px var(--filter-color-6) solid;
+  }
+  
+  .filters .filter-selection li:nth-child(7) .filter-dot.active {
+    background-color: var(--filter-color-7);
+    border: 1px var(--filter-color-7) solid;
+  }
+  
+  .filters .filter-selection li:nth-child(8) .filter-dot.active {
+    background-color: var(--filter-color-8);
+    border: 1px var(--filter-color-8) solid;
+  }
+  
+  
+  /*  */
+  .filters .filter-selection li:nth-child(1) .filter-text.active {
+    color: var(--filter-color-1);
+  }
+  
+  .filters .filter-selection li:nth-child(2) .filter-text.active {
+    color: var(--filter-color-2);
+  }
+  
+  .filters .filter-selection li:nth-child(3) .filter-text.active {
+    color: var(--filter-color-3);
+  }
+  
+  .filters .filter-selection li:nth-child(4) .filter-text.active {
+    color: var(--filter-color-4);
+  }
+  
+  .filters .filter-selection li:nth-child(5) .filter-text.active {
+    color: var(--filter-color-5);
+  }
+  
+  .filters .filter-selection li:nth-child(6) .filter-text.active {
+    color: var(--filter-color-6);
+  }
+  
+  .filters .filter-selection li:nth-child(7) .filter-text.active {
+    color: var(--filter-color-7);
+  }
+  
+  .filters .filter-selection li:nth-child(8) .filter-text.active{
+    color: var(--filter-color-8);
+  }
+  
+  .filters .arrow-left {
+    height: 100px;
+    overflow: hidden;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-25%);
+    width: 20px;
+  }
+  
+  .filters .arrow-left::before {
+    background-color: #183a67;
+      border-radius: 3px;
+      content: "";
+      height: 70px;
+      position: absolute;
+      left: 16px;
+      transform: rotate(45deg);
+      width: 100px;
+  }
+  
+  .filters .arrow-left::after {
+    border-radius: 3px;
+    content: "";
+    height: 70px;
+    position: absolute;
+    transform: rotate(45deg);
+    width: 100px;
+    background-color: var(--main-color);
+    left: 18px;
+  
+  }
+  
+  .download-option {
+    display: none;
+  }
+  
