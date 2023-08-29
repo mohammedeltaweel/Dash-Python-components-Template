@@ -6,7 +6,7 @@ app = Dash(__name__, use_pages=True, external_stylesheets=[dbc.themes.BOOTSTRAP,
 
 app.layout = html.Div([
     html.Nav(
-        className="main-navigation",
+        className="main-navigation",id="main-nav",
         children=[
         html.Div(className="menu-icon", children=[
             html.Span(className="fas fa-bars")
@@ -30,8 +30,44 @@ app.layout = html.Div([
         ]),
     ]),
 
-    html.Div(id="nav-dummy")
-    ])
+    html.Div(id="nav-dummy"),
+    html.Span("""
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rerum reprehenderit! Culpa error veritatis beatae officiis dolores nulla animi nobis quo quam sint excepturi, dignissimos fugiat nisi quibusdam voluptas ea!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rerum reprehenderit! Culpa error veritatis beatae officiis dolores nulla animi nobis quo quam sint excepturi, dignissimos fugiat nisi quibusdam voluptas ea!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rerum reprehenderit! Culpa error veritatis beatae officiis dolores nulla animi nobis quo quam sint excepturi, dignissimos fugiat nisi quibusdam voluptas ea!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rerum reprehenderit! Culpa error veritatis beatae officiis dolores nulla animi nobis quo quam sint excepturi, dignissimos fugiat nisi quibusdam voluptas ea!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rerum reprehenderit! Culpa error veritatis beatae officiis dolores nulla animi nobis quo quam sint excepturi, dignissimos fugiat nisi quibusdam voluptas ea!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rerum reprehenderit! Culpa error veritatis beatae officiis dolores nulla animi nobis quo quam sint excepturi, dignissimos fugiat nisi quibusdam voluptas ea!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rerum reprehenderit! Culpa error veritatis beatae officiis dolores nulla animi nobis quo quam sint excepturi, dignissimos fugiat nisi quibusdam voluptas ea!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rerum reprehenderit! Culpa error veritatis beatae officiis dolores nulla animi nobis quo quam sint excepturi, dignissimos fugiat nisi quibusdam voluptas ea!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rerum reprehenderit! Culpa error veritatis beatae officiis dolores nulla animi nobis quo quam sint excepturi, dignissimos fugiat nisi quibusdam voluptas ea!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rerum reprehenderit! Culpa error veritatis beatae officiis dolores nulla animi nobis quo quam sint excepturi, dignissimos fugiat nisi quibusdam voluptas ea!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rerum reprehenderit! Culpa error veritatis beatae officiis dolores nulla animi nobis quo quam sint excepturi, dignissimos fugiat nisi quibusdam voluptas ea!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rerum reprehenderit! Culpa error veritatis beatae officiis dolores nulla animi nobis quo quam sint excepturi, dignissimos fugiat nisi quibusdam voluptas ea!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rerum reprehenderit! Culpa error veritatis beatae officiis dolores nulla animi nobis quo quam sint excepturi, dignissimos fugiat nisi quibusdam voluptas ea!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rerum reprehenderit! Culpa error veritatis beatae officiis dolores nulla animi nobis quo quam sint excepturi, dignissimos fugiat nisi quibusdam voluptas ea!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rerum reprehenderit! Culpa error veritatis beatae officiis dolores nulla animi nobis quo quam sint excepturi, dignissimos fugiat nisi quibusdam voluptas ea!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rerum reprehenderit! Culpa error veritatis beatae officiis dolores nulla animi nobis quo quam sint excepturi, dignissimos fugiat nisi quibusdam voluptas ea!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rerum reprehenderit! Culpa error veritatis beatae officiis dolores nulla animi nobis quo quam sint excepturi, dignissimos fugiat nisi quibusdam voluptas ea!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rerum reprehenderit! Culpa error veritatis beatae officiis dolores nulla animi nobis quo quam sint excepturi, dignissimos fugiat nisi quibusdam voluptas ea!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rerum reprehenderit! Culpa error veritatis beatae officiis dolores nulla animi nobis quo quam sint excepturi, dignissimos fugiat nisi quibusdam voluptas ea!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rerum reprehenderit! Culpa error veritatis beatae officiis dolores nulla animi nobis quo quam sint excepturi, dignissimos fugiat nisi quibusdam voluptas ea!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rerum reprehenderit! Culpa error veritatis beatae officiis dolores nulla animi nobis quo quam sint excepturi, dignissimos fugiat nisi quibusdam voluptas ea!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rerum reprehenderit! Culpa error veritatis beatae officiis dolores nulla animi nobis quo quam sint excepturi, dignissimos fugiat nisi quibusdam voluptas ea!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rerum reprehenderit! Culpa error veritatis beatae officiis dolores nulla animi nobis quo quam sint excepturi, dignissimos fugiat nisi quibusdam voluptas ea!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rerum reprehenderit! Culpa error veritatis beatae officiis dolores nulla animi nobis quo quam sint excepturi, dignissimos fugiat nisi quibusdam voluptas ea!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rerum reprehenderit! Culpa error veritatis beatae officiis dolores nulla animi nobis quo quam sint excepturi, dignissimos fugiat nisi quibusdam voluptas ea!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rerum reprehenderit! Culpa error veritatis beatae officiis dolores nulla animi nobis quo quam sint excepturi, dignissimos fugiat nisi quibusdam voluptas ea!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rerum reprehenderit! Culpa error veritatis beatae officiis dolores nulla animi nobis quo quam sint excepturi, dignissimos fugiat nisi quibusdam voluptas ea!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rerum reprehenderit! Culpa error veritatis beatae officiis dolores nulla animi nobis quo quam sint excepturi, dignissimos fugiat nisi quibusdam voluptas ea!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rerum reprehenderit! Culpa error veritatis beatae officiis dolores nulla animi nobis quo quam sint excepturi, dignissimos fugiat nisi quibusdam voluptas ea!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rerum reprehenderit! Culpa error veritatis beatae officiis dolores nulla animi nobis quo quam sint excepturi, dignissimos fugiat nisi quibusdam voluptas ea!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rerum reprehenderit! Culpa error veritatis beatae officiis dolores nulla animi nobis quo quam sint excepturi, dignissimos fugiat nisi quibusdam voluptas ea!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rerum reprehenderit! Culpa error veritatis beatae officiis dolores nulla animi nobis quo quam sint excepturi, dignissimos fugiat nisi quibusdam voluptas ea!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rerum reprehenderit! Culpa error veritatis beatae officiis dolores nulla animi nobis quo quam sint excepturi, dignissimos fugiat nisi quibusdam voluptas ea!
+              
+              """)
+    ], className="main-content")
 
 clientside_callback(
 """function (id) {
@@ -40,6 +76,15 @@ clientside_callback(
 }""", 
 Output('nav-dummy', 'children'), Input('nav-dummy', 'children'))
 
+clientside_callback(
+    """
+    function(id) {
+    changeNavStyle();
+    return window.dash_clientside.no_update
+    }
+""",
+Output("main-nav", "children"), Input("main-nav", "children")
+)
 
 
 if __name__ == "__main__":

@@ -46,3 +46,16 @@ function setupNavbarFunctionality() {
     window.addEventListener("popstate", updateActiveLink);
   }
   
+
+  function changeNavStyle (){
+    const primaryHeader = document.querySelector(".main-navigation");
+    const scrollWatcher = document.createElement("div");
+    scrollWatcher.setAttribute("data-scroll-watcher", "");
+    
+    primaryHeader.before(scrollWatcher);
+    
+    const navObserver = new IntersectionObserver((entries) =>{
+        primaryHeader.classList.toggle("sticking", !entries[0].isIntersecting);
+    }, {rootMargin: "100px 0px 0px 0px"});
+    navObserver.observe(scrollWatcher);
+    }
