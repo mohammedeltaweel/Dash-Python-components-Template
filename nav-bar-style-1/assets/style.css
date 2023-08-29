@@ -1,0 +1,344 @@
+:root {
+  /* colors */
+  --clr-dark: 230 35% 7%;
+  --clr-light: 231 77% 90%;
+  --clr-white: 0 0% 100%;
+  --main-color: #183153;
+  --secondary-color: #d09c4f;
+  --tertiary-color: #213B61;
+  --neutral-color: #E0DEDE;
+  --disabled-color: #83868b;
+  --dark-blue: #0d1929;
+  --card-height: 85vh;
+  --filter-color-1: #fffe7e;
+  --filter-color-2: #1dcf53;
+  --filter-color-3: #0060ff;
+  --filter-color-4: #ff005b;
+  --filter-color-5: #00b6ff;
+  --filter-color-6: #8af994;
+  --filter-color-7: #e86bde;
+  --filter-color-8: #6d52ff;
+  /* font-sizes */
+  --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+  --fs-800: 3.5rem;
+  --fs-700: 1.5rem;
+  --fs-600: 1rem;
+  --fs-500: 1rem;
+  --fs-400: 0.9375rem;
+  --fs-300: 1rem;
+  --fs-200: 0.875rem;
+  
+  /* font-families */
+  --ff-serif: "Bellefair", serif;
+  --ff-sans-cond: "Barlow Condensed", sans-serif;
+  --ff-sans-normal: "Barlow", sans-serif;
+}
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+@media (min-width: 35em) {
+  :root {
+      --fs-800: 5rem;
+      --fs-700: 2.5rem;
+      --fs-600: 1.5rem;
+      --fs-500: 1.25rem;
+      --fs-400: 1rem;
+  }
+}
+
+@media (min-width: 45em) {
+  :root {
+      /* font-sizes */
+      --fs-800: 6.25rem;
+      --fs-700: 3.5rem;
+      --fs-600: 2rem;
+      --fs-500: 1.75rem;
+      --fs-400: 1.125rem;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+body{
+  background: #f2f2f2;
+}
+.main-navigation{
+  background: var(--dark-blue);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.main-navigation .main-logo{
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  margin-left: 8px;
+}
+.main-navigation .main-nav-items{
+  display: flex;
+  flex: 1;
+  /* padding: 0 0 0 40px; */
+  --underline-gap: 0.5rem;
+  padding: 16px 0px 3px 68px;
+  --underline-gap: 0.5rem;
+  justify-content: start;
+}
+.main-navigation .main-nav-items li{
+  list-style: none;
+  padding: 0 15px;
+}
+.main-navigation .main-nav-items li a{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.main-navigation form{
+  display: flex;
+  height: 40px;
+  padding: 2px;
+  background: #1e232b;
+  min-width: 18%!important;
+  border-radius: 2px;
+  border: 1px solid rgba(155,155,155,0.2);
+}
+.main-navigation form .search-data{
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  color: #fff;
+  font-size: 17px;
+  border: none;
+  font-weight: 500;
+  background: none;
+  outline:none;
+}
+.main-navigation form button{
+  padding: 0 15px;
+  color: #fff;
+  font-size: 17px;
+  background: #ff3d00;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.main-navigation form button:hover{
+  background: #e63600;
+}
+.main-navigation .menu-icon,
+.main-navigation .cancel-icon,
+.main-navigation .search-icon{
+  width: 40px;
+  text-align: center;
+  margin: 0 50px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+.main-navigation .menu-icon span,
+.main-navigation .cancel-icon,
+.main-navigation .search-icon{
+  display: none;
+}
+@media (max-width: 1245px) {
+  .main-navigation{
+    padding: 0 50px;
+  }
+}
+@media (max-width: 1140px){
+  .main-navigation{
+    padding: 0px;
+  }
+  .main-navigation .main-logo{
+    flex: 2;
+    text-align: center;
+  }
+  .main-navigation .main-nav-items{
+    position: fixed;
+    z-index: 99;
+    top: 70px;
+    width: 100%;
+    left: -100%;
+    height: 100%;
+    padding: 10px 50px 0 50px;
+    text-align: center;
+    background: hsl( var(--clr-dark)/0.5);
+    backdrop-filter: blur(1.5rem);
+    display: inline-block;
+    transition: left 0.3s ease;
+  }
+  .main-navigation .main-nav-items.active{
+    left: 0px;
+  }
+  .main-nav-items.underline-indicators > .active {
+    border: 0;
+ }
+ .main-navigation .main-nav-items li{
+    line-height: 40px;
+    margin: 30px 0;
+  }
+  .main-navigation .main-nav-items li a{
+    font-size: 20px;
+  }
+  .main-navigation form{
+    position: absolute;
+    top: 80px;
+    right: 50px;
+    opacity: 0;
+    pointer-events: none;
+    transition: top 0.3s ease, opacity 0.1s ease;
+  }
+  .main-navigation form.active{
+    top: 95px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .main-navigation form:before{
+    position: absolute;
+    content: "";
+    top: -13px;
+    right: 0px;
+    width: 0;
+    height: 0;
+    z-index: -1;
+    border: 10px solid transparent;
+    border-bottom-color: #1e232b;
+    margin: -20px 0 0;
+  }
+  .main-navigation form:after{
+    position: absolute;
+    content: '';
+    height: 60px;
+    padding: 2px;
+    background: #1e232b;
+    border-radius: 2px;
+    min-width: calc(100% + 20px);
+    z-index: -2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .main-navigation .menu-icon{
+    display: block;
+  }
+  .main-navigation .search-icon,
+  .main-navigation .menu-icon span{
+    display: block;
+  }
+  .main-navigation .menu-icon span.hide,
+  .main-navigation .search-icon.hide{
+    display: none;
+  }
+  .main-navigation .cancel-icon.show{
+    display: block;
+  }
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+.content header{
+  font-size: 30px;
+  font-weight: 700;
+}
+.content .text{
+  font-size: 30px;
+  font-weight: 700;
+}
+.space{
+  margin: 10px 0;
+}
+.main-navigation .main-logo.space{
+  color: red;
+  padding: 0 5px 0 0;
+}
+@media (max-width: 980px){
+  .main-navigation .menu-icon,
+  .main-navigation .cancel-icon,
+  .main-navigation .search-icon{
+    margin: 0 20px;
+  }
+  .main-navigation form{
+    right: 30px;
+  }
+}
+@media (max-width: 350px){
+  .main-navigation .menu-icon,
+  .main-navigation .cancel-icon,
+  .main-navigation .search-icon{
+    margin: 0 10px;
+    font-size: 16px;
+  }
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.content header{
+  font-size: 30px;
+  font-weight: 700;
+}
+.content .text{
+  font-size: 30px;
+  font-weight: 700;
+}
+.content .space{
+  margin: 10px 0;
+}
+
+.underline-indicators > * {
+  cursor: pointer;
+  padding: var(--underline-gap, 1rem) 0;
+  border: 0;
+  border-bottom: .2rem solid hsl( var(--clr-white)/0);
+  background-color: transparent;
+  position: relative; /* Add relative positioning */
+}
+
+/* Additional styles for smaller width and shifted position */
+.underline-indicators > *::before {
+  content: '';
+  position: absolute;
+  bottom: -8px; /* Shift position slightly to the bottom */
+  left: 50%; /* Center the indicator under the nav item */
+  transform: translateX(-50%);
+  width: 80%; /* Set the width to be 100% of the nav item */
+  height: 3px; /* Set the height of the indicator */
+  background-color: hsl( var(--clr-white) / 1);
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease-in-out;
+  
+}
+.underline-indicators > .active::before,
+.underline-indicators > .active:hover::before{
+  opacity: 1;
+
+}
+
+.underline-indicators > *:hover::before,
+.underline-indicators > [aria-selected="true"]::before {
+  opacity: 0.5; /* Show the indicator on hover, focus, or active state */
+
+}
