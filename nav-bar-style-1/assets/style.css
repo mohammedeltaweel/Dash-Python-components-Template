@@ -1,63 +1,7 @@
 :root {
-  /* colors */
   --clr-dark: 230 35% 7%;
-  --clr-light: 231 77% 90%;
   --clr-white: 0 0% 100%;
-  --main-color: #183153;
-  --secondary-color: #d09c4f;
-  --tertiary-color: #213B61;
-  --neutral-color: #E0DEDE;
-  --disabled-color: #83868b;
-  --dark-blue: #0d1929;
-  --card-height: 85vh;
-  --filter-color-1: #fffe7e;
-  --filter-color-2: #1dcf53;
-  --filter-color-3: #0060ff;
-  --filter-color-4: #ff005b;
-  --filter-color-5: #00b6ff;
-  --filter-color-6: #8af994;
-  --filter-color-7: #e86bde;
-  --filter-color-8: #6d52ff;
-  /* font-sizes */
-  --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
-  --fs-800: 3.5rem;
-  --fs-700: 1.5rem;
-  --fs-600: 1rem;
-  --fs-500: 1rem;
-  --fs-400: 0.9375rem;
-  --fs-300: 1rem;
-  --fs-200: 0.875rem;
-  
-  /* font-families */
-  --ff-serif: "Bellefair", serif;
-  --ff-sans-cond: "Barlow Condensed", sans-serif;
-  --ff-sans-normal: "Barlow", sans-serif;
 }
-.flex {
-  display: flex;
-  gap: var(--gap, 1rem);
-}
-@media (min-width: 35em) {
-  :root {
-      --fs-800: 5rem;
-      --fs-700: 2.5rem;
-      --fs-600: 1.5rem;
-      --fs-500: 1.25rem;
-      --fs-400: 1rem;
-  }
-}
-
-@media (min-width: 45em) {
-  :root {
-      /* font-sizes */
-      --fs-800: 6.25rem;
-      --fs-700: 3.5rem;
-      --fs-600: 2rem;
-      --fs-500: 1.75rem;
-      --fs-400: 1.125rem;
-  }
-}
-
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
 *{
   margin: 0;
@@ -69,8 +13,12 @@
 body{
   background: #f2f2f2;
 }
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
 .main-navigation{
-  background: var(--dark-blue);
+  background: #0d1929;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -213,7 +161,7 @@ body{
   .main-navigation form:before{
     position: absolute;
     content: "";
-    top: -13px;
+    top: -9px;
     right: 0px;
     width: 0;
     height: 0;
