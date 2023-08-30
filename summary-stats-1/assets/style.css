@@ -1,0 +1,75 @@
+      /* stats styles start */
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+      * {
+
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      :before,
+      :after{
+        box-sizing: border-box;
+      }
+      body {
+          background-color: #183153;
+      }
+      
+      .summary-column {
+        display: inherit;
+      }
+      .stats-summary {
+    width: 100%;
+    } 
+    .report-summary {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+    }
+    .summary-highlights {
+    flex-direction: column;
+    }
+    .summary-highlight {
+    width: initial;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 35px
+    }
+    .summary-highlight .summary-highlight-header {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+.summary-highlight .summary-highlight-header .summary-index {
+    font-size: 18px;
+    color: #fff;
+    /* margin-left: 8px; */
+    margin-inline-end: 10px;
+}
+.summary-highlight .summary-highlight-header .summary-name {
+    font-size: 20px;
+    color: #29f6c8;
+}
+.summary-highlight .summary-highlight-description {
+    display: flex;
+    font-size: 24px;
+    color: #fff;
+}
+.summary-highlight .summary-highlight-description .summary-highlight-description-value {
+    width: 170px;
+}
+.summary-highlight .summary-highlight-description .value {
+    margin-bottom: 9px;
+}
+p {
+    margin: 0 0 10px;
+}
+.summary-highlight .summary-highlight-description .value-suffix {
+    font-size: 12px;
+}
+.summary-highlight .summary-highlight-description .description {
+    font-size: 14px;
+    color: #83868b;
+}
+      /* stats styles end */
