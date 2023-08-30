@@ -47,7 +47,8 @@ body{
   height: 0px;
   left: 0;
   bottom: 0;
-  box-shadow: 0 1px 3px 3px #0e1d31;
+  /* box-shadow: 0 1px 3px 3px #0e1d31; */
+  box-shadow: 0 3px 3px 5px rgb(0,0,0,0.2);
 }
 .main-navigation .main-logo{
   color: #fff;
