@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <style>
+        .class3{
+            color: red
+        }
+    </style>
+</head>
+<body>
+    <section class="section" id="home" data-label="Home">
+        <h1 class="class1">Home</h1>
+        <div class="class2">Hello</div>
+    </section>
+    <section class="section" id="about" data-label="About Us">
+        <h1 class="class1">About Us</h1>
+        <div class="class2">Hello</div>
+    </section>
+    <section class="section" id="contact" data-label="Get In Touch">
+        <h1 class="class1">Get in Touch</h1>
+        <div class="class2">Hello</div>
+    </section>
+
+<nav class="nav">
+    <div class="nav-item">
+        <a href="#home" class="nav-dot nav-dot-selected"></a>
+        <span class="nav-label">#home</span>
+    </div>
+
+    <div class="nav-item">
+        <a href="#about" class="nav-dot"></a>
+        <span class="nav-label">#about</span>
+    </div>
+
+    <div class="nav-item">
+        <a href="#contact" class="nav-dot"></a>
+        <span class="nav-label">#contact</span>
+    </div>
+</nav>
+
+<script src="script.js">
+
+// function activateNavigation() {
+//     const sections = document.querySelectorAll(".section");
+//     const navLinks = document.querySelectorAll(".nav-dot");
+
+//     const observer = new IntersectionObserver(
+//         (entries) => {
+//             navLinks.forEach((navLink) => {
+//                 navLink.classList.remove("nav-dot-selected");
+//             });
+
+//             const visibleSection = entries.find((entry) => entry.isIntersecting);
+
+//             if (visibleSection) {
+//                 const visibleSectionId = visibleSection.target.getAttribute("id");
+//                 const correspondingNavLink = document.querySelector(`.nav-dot[href="#${visibleSectionId}"]`);
+//                 if (correspondingNavLink) {
+//                     correspondingNavLink.classList.add("nav-dot-selected");
+//                     history.pushState(null, null, `/#${visibleSectionId}`);
+//                     // updateURLHash(visibleSectionId); // Update the URL hash when the section becomes visible
+//                 }
+//             }
+//         },
+//         { threshold: 0.5 }
+//     );
+
+//     sections.forEach((section) => observer.observe(section));
+    
+// }
+
+//         // Run the function when the DOM is fully loaded
+//         document.addEventListener("DOMContentLoaded", activateNavigation);
+
+</script>
+</body>
+</html>

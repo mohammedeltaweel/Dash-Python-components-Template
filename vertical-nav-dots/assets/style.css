@@ -1,0 +1,112 @@
+html {
+/* scroll-behavior: smooth; */
+scroll-snap-type: y mandatory;
+}
+
+body {
+font-family: "Quicksand", sans-serif;
+margin: 0;
+color:#000;
+}
+
+/* uncomment to hide the scrollbar but keep the scroll action*/
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+.section {
+height: 100vh;
+scroll-snap-align: start;
+scroll-snap-stop: always;
+}
+
+#home {
+background: #aff8db;
+}
+
+#about {
+background: #ffabab;
+}
+
+#contact {
+background: #fff5ba;
+}
+
+#section4 {
+  background: #2496b3;
+}
+
+#section5 {
+  background: #002B36;
+}
+
+#section6 {
+  background: #41eda8;
+}
+
+#section7 {
+  background: #df3838;
+}
+
+#section8 {
+  background: #c3f0fb;
+}
+.nav {
+  --nav-gap: 10px;
+  padding: var(--nav-gap);
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+}
+
+.nav-dot:hover ~ .nav-label {
+  opacity: 1;
+
+}
+
+.nav-label{
+  color: #000;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+
+.nav-item {
+  align-items: center;
+  display: flex;
+  margin-bottom: var(--nav-gap);
+  flex-direction: row-reverse;
+}
+
+/* .nav-dot {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  height: calc(var(--nav-gap));
+  transition: transform 0.1s;
+  width: calc(var(--nav-gap));
+} */
+
+.nav-dot  {
+  height: 25px;
+  width: 25px;
+  background-color:rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  display: inline-block;
+  padding: 10px;
+  margin: 5px;
+  transition: transform 0.1s;
+}
+
+.nav-dot-selected{
+  background: #000000;
+  transform: scale(1.2);
+}
+
+#page-container {
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+  overflow: hidden;
+}
