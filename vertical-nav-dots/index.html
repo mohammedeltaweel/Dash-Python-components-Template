@@ -42,39 +42,28 @@
     </div>
 </nav>
 
-<script src="script.js">
+<script>
+    const options ={
+        root: null,
+        threshold: 1,
+        // rootMargin: ""
+    };
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver(function
+    (entries, observer) {
+        entries.forEach(entry => {
+            if(!entry.isIntersecting) {
+                return;
+            }
+            console.log(entry.target);
 
-// function activateNavigation() {
-//     const sections = document.querySelectorAll(".section");
-//     const navLinks = document.querySelectorAll(".nav-dot");
-
-//     const observer = new IntersectionObserver(
-//         (entries) => {
-//             navLinks.forEach((navLink) => {
-//                 navLink.classList.remove("nav-dot-selected");
-//             });
-
-//             const visibleSection = entries.find((entry) => entry.isIntersecting);
-
-//             if (visibleSection) {
-//                 const visibleSectionId = visibleSection.target.getAttribute("id");
-//                 const correspondingNavLink = document.querySelector(`.nav-dot[href="#${visibleSectionId}"]`);
-//                 if (correspondingNavLink) {
-//                     correspondingNavLink.classList.add("nav-dot-selected");
-//                     history.pushState(null, null, `/#${visibleSectionId}`);
-//                     // updateURLHash(visibleSectionId); // Update the URL hash when the section becomes visible
-//                 }
-//             }
-//         },
-//         { threshold: 0.5 }
-//     );
-
-//     sections.forEach((section) => observer.observe(section));
+            
+        });
+    }, options);
     
-// }
-
-//         // Run the function when the DOM is fully loaded
-//         document.addEventListener("DOMContentLoaded", activateNavigation);
+    sections.forEach(section => {
+        observer.observe(section);
+    })
 
 </script>
 </body>

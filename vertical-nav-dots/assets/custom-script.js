@@ -71,28 +71,4 @@ function activateNavigation() {
   }
   
 
-  const sections = document.querySelectorAll("section");
-const originalHs = document.querySelectorAll(".section .class1");
 
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry =>{
-
-        entry.target.classList.toggle("show", entry.isIntersecting);
-        setTimeout(() => {
-            const sectionid = document.querySelector(".section.show");
-            const hs = document.querySelector(".section.show .class1");
-            const divs = document.querySelector(".section.show .class2");
-            originalHs.forEach(originalh => {
-                originalh.classList.remove("class3");
-            })
-            hs.classList.add("class3");
-        }, 50); // You can adjust the delay (in milliseconds) as needed
-  
-
-    })
-}, {
-    threshold: 0.5
-})
-sections.forEach(section => {
-    observer.observe(section);
-})
